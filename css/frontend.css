@@ -1,0 +1,825 @@
+* {
+	/*outline: none;*/
+}
+
+body {
+	color:#000000;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+	background: #00B7ED;
+}
+
+div, span, a, table, td{
+	outline: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	outline: none;
+}
+a:hover {
+	color: #226BD7;
+}
+
+a:active {
+	color:#226BD7;
+}
+
+a {
+	color:#000000;
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+hr {
+	border-color:#DEE1E2 transparent transparent;
+	border-style:solid hidden hidden;
+	border-width:1px 0 0;
+	height:0;
+	margin-left:0;
+}
+
+
+/**********************
+ *
+ *********************/
+
+/* Layout */
+#spinner {
+	position: absolute; top: 10px; right: 10px;
+	padding: 3px;
+	/*border: solid #777 3px;*/
+	display: none;
+}
+
+#container {
+	/*text-align: left;*/
+	width: 972px;
+	margin: 0px auto;
+	padding-top: 0px;
+	padding: 0px 15px;
+	background: url(../img/frontend/body_bg_gradient.gif) repeat-x;
+	background-color: #F6F6F6;
+}
+
+#content{
+	clear: both;
+	padding: 0px;
+	height: auto;
+	overflow: visible;
+}
+
+#user_status{
+	float: right;
+	padding: 3px 5px;
+	text-align: right;
+	width: 250px;
+}
+
+#footer {
+	clear: both;
+	padding: 10px;
+	text-align: center;
+	color: #828483;
+}
+/* Layout --END */
+
+/* Heahder */
+#main_navigation {
+	margin-bottom:13px;
+	background-image: url( ../img/frontend/navigation_bg.png );
+	height: 95px;
+	width:972px;
+	margin:0 auto;
+}
+
+#main_navigation #logo {
+	display: block;
+	float: left;
+	margin-left:20px;
+	height: 90px;
+	width:  90px;
+	border: dotted #5898F3 1px;
+}
+
+#main_navigation #wrapper {
+	margin:0 auto;
+	width:972px;
+}
+
+
+#main_navigation  #utils {
+	float:right;
+	width:830px;
+	height: 22px;
+	line-height: 34px;
+	text-align: right;
+	padding: 6px 10px;
+	/*border: dotted green 1px;*/
+}
+
+#utils input {
+	width: 100px;
+	margin-left:  5px;
+}
+
+#utils input.blank {
+	color: #AFAFAF;
+}
+
+#main_navigation #menu {
+	float:left;
+	height:45px;
+	margin-left:16px;
+	padding-left:1px;
+	padding-top: 18px;
+	margin-top: 0px;
+}
+
+
+#main_navigation li, #main_navigation li a {
+	display: block;
+	background: transparent url(../img/frontend/navigation.gif) no-repeat scroll 0 0;
+	float:left;
+	font-weight: bold;
+	width: auto;
+}
+
+#main_navigation  li {
+	padding-right: 10px;
+	margin-left:-1px;
+	height:38px;
+	background-position:right 0px;
+}
+
+#main_navigation  li a {
+	color: #444;
+	font-weight: bold;
+	height:28px;
+	padding: 10px 12px 0px 22px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	background-position:left 0px;
+}
+
+#main_navigation  li span {
+	background:transparent url(../img/frontend/navigation.gif) no-repeat scroll right -224px;
+	padding-right:16px;
+	display: block;
+	float: left;
+	height: 13px;
+	margin: 0px;
+	line-height: 13px;
+}
+
+#main_navigation  li.activated span {
+	background:transparent url(../img/frontend/navigation.gif) no-repeat scroll right -237px;
+}
+
+#main_navigation  li:hover {
+	background-position:right -138px;
+}
+
+#main_navigation  li:hover > a{
+	color: white;
+	background-position:left -138px;
+}
+
+#main_navigation li:hover span {
+	background:transparent url(../img/frontend/navigation.gif) no-repeat scroll right -237px;
+}
+
+#main_navigation li.activated {
+	background-position:right -46px;
+}
+
+#main_navigation li.activated:hover {
+	background-position:right -138px;
+}
+
+#main_navigation li.activated:hover a {
+	background-position: left -138px;
+}
+
+#main_navigation li.activated > a{
+	color: white;
+	background-position:left -46px;
+}
+
+#main_navigation li.activated > span {
+	background:transparent url(../img/frontend/navigation.gif) no-repeat scroll right -46px;
+}
+
+#main_navigation li.nodrop a {
+	padding: 10px 10px 0px 30px;
+}
+
+#main_navigation li.nodrop span {
+	background: none;
+	padding-right:10px;
+}
+
+#main_navigation li.nodrop:hover {
+	background-position: right -46px;
+}
+
+#main_navigation li.nodrop:hover > a{
+	color: white;
+	background-position: left -46px;
+}
+
+#main_navigation li.nodrop:hover span {
+	background: none;
+}
+
+.sub_big, .sub_small{
+	display: none;
+	font-weight: normal;
+	position: absolute;
+	z-index: 2000;
+}
+
+.sub_big .top, .sub_big .body, .sub_big .bottom ,
+.sub_small .top, .sub_small .body, .sub_small .bottom  {
+	background: transparent url(../img/frontend/main_navigation.png);
+}
+
+.sub_big { width: 512px; }
+
+.sub_small { width: 253px; }
+
+.sub_big .top {
+	background-position: -4px -337px;
+	height: 10px;
+	width: 100%;
+}
+
+.sub_big .body{
+	background-position: -4px -360px;
+	width: 100%;
+	height: auto;
+	padding: 0px 15px 5px 15px;
+}
+
+.sub_big .bottom {
+	background-position: -4px -780px;
+	width: 100%;
+	height: 15px;
+}
+
+.sub_big .line {
+	background-color: #5898F3;
+	width: 499px;
+	height: 2px;
+	margin-left: 6px;
+}
+
+.sub_small .top {
+	background-position: -685px -337px;
+	height: 10px;
+	width: 100%;
+}
+
+.sub_small .body{
+	background-position: -685px -350px;
+	width: 100%;
+	height: auto;
+	padding: 0px 15px 5px 15px;
+	overflow: auto;
+}
+
+.sub_small .bottom {
+	background-position: -685px -780px;
+	width: 100%;
+	height: 15px;
+}
+
+.sub_small .line {
+	background-color: #5898F3;
+	width: 241px;
+	height: 2px;
+	margin-left: 6px;
+}
+
+#main_navigation ul.links {
+	margin-left: 15px;
+	list-style: disc inside;
+}
+
+#main_navigation ul.links  li, #main_navigation ul.links li:hover {
+	height: auto;
+	width: 205px;
+	background: none;
+	list-style: disc outside;
+	display: list-item;
+	padding: 0px;
+	margin: 0px;
+}
+
+#main_navigation ul.links li:hover {
+	background: #5898F3;
+}
+
+#main_navigation ul.links li a {
+	background: none;
+	width: auto;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	color: #5898F3;
+}
+
+#main_navigation ul.links li a:hover  {
+	color: white;
+}
+
+#main_navigation .body a {
+	background: none;
+	/*border: dotted 1px blue;*/
+	padding: 0px;
+	width: 230px;
+	text-transform: none;
+	text-align: left;
+	margin-right: 13px;
+	height: 20px;
+	line-height: 20px;
+	padding: 2px 5px;
+}
+
+#main_navigation .body div.item {
+	width: 230px;
+	height: 26px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+#main_navigation .body div.item:hover {
+	/*background:  transparent url( ../img/frontend/fix_height.png ) no-repeat 0 0;
+	background-position: right -60px;*/
+}
+
+#main_navigation .body .item:hover a:hover {
+	background:  transparent url( ../img/frontend/fix_height.png ) no-repeat 0 0;
+	background-position: left -60px;
+	color: white;
+}
+
+/* Header -- END */
+
+/*********
+ * Main ADS
+*************/
+#main_ads {
+	margin: 0px;
+	padding: 0px;
+	background: blue;
+}
+#main_ads .adsCorner1{
+	/*background: url(/img/ads-corner.png);*/
+	width: 11px; height: 11px;
+	z-index: 100;
+	position: relative;
+	display: inline;
+	float: left;
+	top: -11px;	left: -16px;
+	background-position: 0px 0px;
+}
+
+#main_ads .adsCorner2{
+	/*background: url(/img/ads-corner.png);*/
+	width: 11px; height: 11px;
+	z-index: 100;
+	position: relative;
+	display: inline;
+	float: right;
+	top: -11px; left: 16px;
+	background-position: 11px 11px;
+}
+
+#main_ads .adsDesc {
+	height: auto;
+	padding: 10px 10px;
+	margin: 10px;
+	position: relative;
+	top: 20px;
+	display: inline;
+	font-weight: bold;
+	background: url(/img/back_body.png);
+	background: white;
+}
+
+#nav {
+	float: right;
+	border: 1px dashed red;
+}
+
+#nav a {
+	background: white;
+	border: solid 1px white;
+	padding: 0px 3px;
+	margin: 1px 3px;
+	color: gray;
+	font-weight: bold;
+	height: 17px;
+	display: block;
+	float: left;
+}
+
+#nav a.activeSlide {
+	background: red;
+	color: white;
+}
+/*********
+ * Main ADS -- END
+*************/
+
+
+/*************************
+ * FORMS
+*************************/
+fieldset {
+	margin: 10px;
+	width: 480px;
+}
+
+fieldset legend {
+	font-weight: bold;
+	padding: 5px;
+}
+
+div.front-end {
+	/*border: dotted 1px #888;
+	border-bottom: dotted 1px green;*/
+	padding: 2px 5px;
+	margin: 0px 15px 5px 15px;
+}
+
+.front-end label {
+	display: block;
+	float: left;
+	min-width: 120px;
+	padding-left: 10px;
+}
+
+.front-end input{
+	width: 230px;
+}
+
+.front-end textarea {
+	width: 300px;
+}
+
+.front-end select {
+	width: 235px;
+}
+
+.front-end input[type=checkbox] {
+	width: 15px;
+}
+
+.front-end input[type=button]{
+	width: auto;
+	padding: 3px 5px;
+}
+
+div.tiny {
+	width: 120px;
+}
+
+div.tiny input {
+	width: 116px;
+}
+
+#placeHolderPrices {
+	border: dotted 1px #888;
+	border-bottom: dotted 1px green;
+	padding: 2px 5px;
+	margin: 15px;
+	border-collapse: collapse;
+}
+
+/*************************
+ * FORMS -- END
+*************************/
+
+/***************************
+ *Content Detail
+ **************************/
+#gallery {
+	clear: both;
+	width: auto;
+	border-top: 1px solid #DDE1E2;
+	padding: 5px 00px;
+}
+
+#gallery img {
+	border: none;
+	
+}
+
+#adminToolbar{
+	float: right;
+}
+
+#adminToolbar img {
+	border: none;
+}
+
+.content_part a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.content-header {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 0px;
+	display: block;
+}
+
+#adsPager {
+	/*border: solid 1px red;*/
+	width: auto;
+	height: 30px;
+}
+
+#adsPager a {
+	border: solid 1px white;
+	color: white;
+	padding: 3px 5px;
+	margin: 0px 2px;
+	background: #00B7ED;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	float: left;
+}
+
+#adsPager a.activeSlide {
+	background: white;
+	color: #226BD7;
+}
+
+/***************************
+ *Article & Product Navigator
+ **************************/
+.product {
+	width: 100%;
+	padding: 5px 10px;
+}
+
+.product-block {
+	border-bottom: dashed 1px #BBB;
+	
+	clear: both;
+	height: auto;
+	width: auto;
+	overflow: auto;
+	margin: 5px 10px;
+	padding: 5px 0px;
+	
+	/*require for more button - on the bottom-right corner*/
+	position: relative;
+}
+
+.product-block-thumbnail {
+	margin: 5px 10px;
+	padding: 5px 0px;
+	float: left;
+	border-right: dashed 1px #BBB;
+	width: 220px;
+}
+
+.image-part {
+	display: block;
+	float: left;
+	width: 200px;
+}
+
+#product-list {
+	width: 725px;
+	float: right;
+}
+
+#product-list ul{
+	padding: 5px 30px ;
+}
+
+#overview {
+	padding: 0px;
+	margin: 0px 0px 10px 10px;
+}
+
+#article-list {
+	width: 725px;
+	float: right;
+}
+
+.article_block{
+	overflow: auto;
+	clear: both;
+	display: block;
+	margin: 0px 10px 5px 10px;
+	border-bottom: dashed 1px #BBB;
+	padding: 5px 0px;
+}
+
+#prodtuct-nav {
+	width: 230px;
+	float: left;
+	margin-top: 8px;
+	padding: 5px 0px;
+}
+
+#prodtuct-nav h3 {
+	color: white;
+	font-size: 15px;
+	background: transparent url(../img/frontend/sidebar_header.png) no-repeat scroll left 0;
+	width: 220px;
+	height: 26px;
+	padding:6px 12px 0;
+	line-height: 1.2;
+}
+
+#prodtuct-nav a{
+	background: transparent url(../img/frontend/tabs_accordions.png) -1px -600px;
+	background-repeat:no-repeat;
+	height: 30px;
+	display: block;
+	padding-left: 40px;
+	padding-top: 10px;
+	line-height: 18px;
+	color: #043E93;
+	margin-top: -1px;
+	text-decoration:none;
+	font-size:13px;
+	font-weight: bold;
+}
+
+#prodtuct-nav a.active {
+	background: transparent url(../img/frontend/tabs_accordions.png) -1px -650px;
+}
+
+#article-nav {
+	width: 230px;
+	float: left;
+	margin-top: 8px;
+	padding: 5px 0px;
+}
+
+#article-nav h3 {
+	color: white;
+	font-size: 16px;
+	background: transparent url(../img/frontend/sidebar_header.png) no-repeat scroll left 0;
+	width: 220px;
+	height: 26px;
+	padding:6px 12px 0;
+	line-height: 1.2;
+}
+
+#article-nav a{
+	background: transparent url(../img/frontend/tabs_accordions.png) -1px -600px;
+	background-repeat:no-repeat;
+	height: 30px;
+	display: block;
+	padding-left: 40px;
+	padding-top: 10px;
+	line-height: 18px;
+	color: #043E93;
+	margin-top: -1px;
+	text-decoration:none;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#article-nav a.active {
+	background: transparent url(../img/frontend/tabs_accordions.png) -1px -650px;
+}
+
+
+
+/***************************
+ *Article & Product Navigator -- END
+ **************************/
+
+/***************************
+ * Breadcrum 
+ **************************/
+#breadcrum {
+	clear: both;
+	display: block;
+	padding: 10px 0px 5px 0px;
+	width: 100%;
+}
+
+#breadcrum a{
+	text-transform: capitalize;
+}
+
+#breadcrum ul {
+	list-style: none;
+}
+
+#breadcrum li{
+	background: transparent url(../img/frontend/icons_bullets.png) 0 -497px no-repeat;
+	padding-left: 16px;
+	float: left;
+	margin-right: 10px;
+}
+
+#breadcrum li.home{
+	background: transparent url(../img/frontend/icons_bullets.png) 0 2px  no-repeat;
+	padding-left: 20px;
+}
+
+/***************************
+ * Breadcrum -- END
+ **************************/
+
+/***************************
+ * Homepage
+ **************************/
+.whitebox {
+	background: transparent url(../img/frontend/whitebox.png);
+	width: 200px;
+	height: auto;
+	padding: 10px 10px 0px 10px;	
+}
+
+.whitebox_bottom{
+	background: transparent url(../img/frontend/whitebox.png) 0px -890px;
+	height: 10px;
+}
+
+.box_content h2 {
+	border-bottom: 1px solid #DDE1E2;
+	padding: 0px 0px 8px 10px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.box_content h2 .action{
+	font-size: 12px;
+	float: right;
+	font-weight: normal;
+	padding-right: 10px;
+}
+
+.box_content {
+	float: left;
+	background: transparent url(../img/frontend/box_content.png);
+	width: 742px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	padding: 10px 0px 0px 0px;
+}
+
+.box_content ul {
+	padding-left: 25px;
+}
+
+.box_content .bottom {
+	background: transparent url(../img/frontend/box_content.png) 0px -895px;
+	width: 742px;
+	height: 5px;
+	clear: both;
+}
+
+.box_2cols {
+	width: 340px;
+	float: left;
+	border-right: solid #DDE1E2 1px;
+	padding: 4px 15px 4px 4px;
+	margin: 0px 0px 5px 10px;
+    /*border: solid green 1px;*/
+}
+
+.box_2cols.last {
+    width: 340px;
+    padding: 4px 4px 4px 4px;
+	border-right: none;
+}
+
+.box_3cols {
+    text-align: center;
+	width: 230px;
+	float: left;
+	border-right: solid #DDE1E2 1px;
+	margin: 0px 0px 5px 10px;
+}
+
+.box_3cols.last{
+	border-right: none;
+    margin: 0px 0px 5px 10px;
+}
+
+/***************************
+ * Homepage -- END
+ **************************/

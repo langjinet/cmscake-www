@@ -1,0 +1,273 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	outline: none;
+}
+
+img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-size: 100%;
+}
+
+h1 {
+	margin: 10px 10px 0px 10px;
+	font-size: 120%;
+	float: left;
+	text-transform: uppercase;
+	width: 670px;
+	font-weight: normal;
+	font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+#admin-content {
+	padding: 10px;
+	min-height: 500px;
+}
+
+#admin-header {
+	height: auto;
+	overflow: auto;
+}
+#admin-header, #admin-footer {
+	padding: 5px 0px 0px 5px;
+	background: #53a4f5;
+	color: white;
+	margin-bottom: 10px;
+	font-size: 110%;
+	font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif
+}
+
+#admin-footer {
+	text-align: center;
+	margin: 10px 0px;
+	clear: both;
+}
+
+#admin-header a, #admin-footer a {
+	color: black;
+	text-decoration: none;
+}
+
+#admin-menu {
+	list-style: none;
+	padding: 0px;
+	width: auto;
+	display: block;
+	
+	float: left;
+	overflow: auto;
+}
+
+#admin-menu img {
+	padding: 2px;
+}
+
+#admin-menu li {
+	float: left;
+	margin: 0px 3px 0px 16px;
+	text-align: center;
+	padding: 5px 7px;
+}
+
+#admin-menu li.activated {
+	background: white;
+	
+	border-top-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+}
+
+#admin-menu li.activated a {
+	color: black;
+}
+
+div.submit {
+	margin-left: 167px;
+	margin-top:  20px;
+}
+div.input {
+	padding: 3px 8px;
+	clear: both;
+}
+
+div.input label:first-child {
+	display: block;
+	float:left;
+	width: 150px;
+	font-weight: normal;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 3px;
+}
+
+input[type=text] {
+	width: 200px;
+	height: 20px;
+	padding: 2px 3px;
+}
+
+.input select{
+	width: 208px;
+	height: 24px;
+	padding: 2px 3px;
+}
+
+/*
+div.input {
+	padding: 3px 8px;
+	clear: both;
+}
+
+div.input label {
+	display: block;
+	float:left;
+	width: 150px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+}
+
+input[type=text] {
+	width: 200px;
+}
+
+.tiny input[type=text] {
+	width: 100px;
+}
+
+select{
+	width: 205px;
+}
+
+input[type=radio] {
+	float: left;
+	width: 20px;
+	height: 30px;
+	margin-top: -8px;
+}
+
+input[type=radio] + label {
+	width: 80px;
+	text-align: left;
+}
+
+input[type=submit] {
+	font-weight: bold;
+	border: none;
+	margin: 10px 0px 10px 160px;
+	color: black;
+	background-color: white;
+	
+	padding: 10px 10px 5px 35px;
+	background-repeat: no-repeat;
+	background-image: url(../img/admin/save.png);
+}
+*/
+
+/* Paging */
+div.paging {
+	color: #ccc;
+	display: block;
+	clear: both;
+	padding-top: 15px;	
+}
+
+div.paging div.disabled {
+	color: #ddd;
+	display: inline;
+}
+
+div.paging span{
+	padding: 1px 5px;
+	border: solid #ccc 1px;
+}
+
+div.paging span.current {
+	color: red;
+}
+
+/* Paging --END */
+
+/*Table style */
+/**
+depend on jQuery UI, rounded corner
+
+ui-state-highlight ui-corner-all
+**/
+
+.tableContainer {
+	width: 70%;
+}
+
+.ui-corner-all .tbl {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.ui-corner-all .tbl th {
+	padding: 3px 5px;
+	font-size: 110%;
+	font-weight: normal;
+	font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.ui-corner-all .tbl tr:hover td,
+.ui-corner-all .tbl tr:hover.alt td {
+	background: #C1DBFF;
+}
+
+.ui-corner-all .tbl tr.alt td {
+	background: #EFEFEF;	
+}
+
+.ui-corner-all .tbl td {
+	padding: 3px 5px;
+}
+
+.ui-corner-all .tbl tr.selected td {
+	background: #800000;
+	color: white;
+}
+
+/*Table style --END*/
+
+/* Media page**/
+.searchBlock{
+    width: 320px;
+	height: 30px;
+    display: block;
+    float: left;
+}
+
+.searchBlock label{
+    width: 100px;
+	display: block;
+	float: left;
+	text-align: right;
+	padding-top: 3px;
+	padding-right: 8px;
+}
+/* Media page --END **/
+
+.hint {
+	display: block;
+	position: fixed;
+}
